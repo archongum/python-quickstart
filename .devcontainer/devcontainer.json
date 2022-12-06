@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+    "name": "Python 3",
+    "image": "continuumio/miniconda3:4.12.0",
+    // "features": {
+    //     "ghcr.io/guiyomh/features/vim:0": {}
+    // }
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": {
+        "git_config_1": "git config user.name  archon",
+        "git_config_2": "git config user.email archon@datastory.com.cn",
+        "pip_config": "pip config --global set global.index-url https://mirrors.aliyun.com/pypi/simple && pip install -r requirements.txt"
+    }
+
+    // Configure tool-specific properties.
+    // "customizations": {},
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
+}
